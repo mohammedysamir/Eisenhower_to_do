@@ -4,4 +4,6 @@
     <string name="eisenhower_to_do">Eisenhower To-Do</string>
     <string name="list_all_your_tasks">List all your tasks</string>
     <string name="task_Input">Task name</string>
+    <string name="backgroundtodo">BackgroundToDo</string>
+    <string name="let_s_plan_them_button">Let\'s plan them</string>
 </resources>
