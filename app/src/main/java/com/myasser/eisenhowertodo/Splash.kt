@@ -12,6 +12,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         val intent = Intent(this, ToDoList::class.java)
-        Handler(Looper.getMainLooper()).postDelayed({ startActivity(intent) }, 2000)
+        Handler(Looper.getMainLooper()).postDelayed({ startActivity(intent)
+            finish()}, 2000)
     }
 }
