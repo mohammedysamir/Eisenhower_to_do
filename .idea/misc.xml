@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/eisenhower_to_do/app/src/main/res/layout/activity_splash.xml" value="0.19322916666666667" />
+        <entry key="..\:/eisenhower_to_do/app/src/main/res/font/ocr_a.xml" value="0.67" />
+        <entry key="..\:/eisenhower_to_do/app/src/main/res/layout/activity_splash.xml" value="0.22" />
       </map>
     </option>
   </component>
