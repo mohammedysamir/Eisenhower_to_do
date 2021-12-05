@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Eisenhower to do</string>
+    <string name="splash_background">Splash_background</string>
+    <string name="eisenhower_to_do">Eisenhower To-Do</string>
 </resources>
