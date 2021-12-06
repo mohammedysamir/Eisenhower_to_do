@@ -19,49 +19,47 @@
         android:textColor="@color/black"
         android:textSize="28sp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
         android:id="@+id/doNowButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/doNow_color"
         android:contentDescription="@string/doButton"
         app:borderWidth="0dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
         android:id="@+id/decideButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/doLater_color"
         android:contentDescription="@string/decideButton"
         app:borderWidth="0dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
         android:id="@+id/delegateButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/delegate_color"
-        android:contentDescription="@string/delegateButton"
-        app:borderWidth="0dp" />
+        android:contentDescription="@string/delegateButton" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
         android:id="@+id/deleteButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/delete_color"
-        android:contentDescription="@string/deleteButton"
-        app:borderWidth="0dp" />
+        android:contentDescription="@string/deleteButton" />
 
 </LinearLayout>
