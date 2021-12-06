@@ -1,23 +1,21 @@
 package com.myasser.eisenhowertodo
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.content.res.AppCompatResources.*
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>(),
-    View.OnClickListener {
-    lateinit var taskItem: Task
+class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val taskName: TextView = itemView.findViewById(R.id.taskName)
-        val doNowButton: FloatingActionButton = itemView.findViewById(R.id.doNowButton)
-        val decideButton: FloatingActionButton = itemView.findViewById(R.id.decideButton)
-        val delegateButton: FloatingActionButton = itemView.findViewById(R.id.delegateButton)
-        val deleteButton: FloatingActionButton = itemView.findViewById(R.id.deleteButton)
+        val doNowButton: ImageButton = itemView.findViewById(R.id.doNowButton)
+        val decideButton: ImageButton = itemView.findViewById(R.id.decideButton)
+        val delegateButton: ImageButton = itemView.findViewById(R.id.delegateButton)
+        val deleteButton: ImageButton = itemView.findViewById(R.id.deleteButton)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,18 +23,37 @@ class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdap
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        taskItem = mList[position]
+        val taskItem = mList[position]
+        Log.i("task", taskItem.toString())
         holder.taskName.text = taskItem.getName()
-        if (taskItem.getClassified() == Classified.None) {
-            holder.decideButton.background = getDrawable(holder.itemView.context, R.color.transparent)
-            holder.doNowButton.background = getDrawable(holder.itemView.context, R.color.transparent)
-            holder.delegateButton.background = getDrawable(holder.itemView.context, R.color.transparent)
-            holder.deleteButton.background = getDrawable(holder.itemView.context, R.color.transparent)
+        holder.doNowButton.setOnClickListener {
+            taskItem.setClass(Classified.Do)
+            holder.decideButton.setImageResource(R.color.transparent)
+            holder.delegateButton.setImageResource(R.color.transparent)
+            holder.deleteButton.setImageResource(R.color.transparent)
+            holder.doNowButton.setImageResource(R.drawable.ic_baseline_done_24)
         }
-        holder.doNowButton.setOnClickListener(this)
-        holder.decideButton.setOnClickListener(this)
-        holder.delegateButton.setOnClickListener(this)
-        holder.deleteButton.setOnClickListener(this)
+        holder.decideButton.setOnClickListener {
+            taskItem.setClass(Classified.Decide)
+            holder.doNowButton.setImageResource(R.color.transparent)
+            holder.delegateButton.setImageResource(R.color.transparent)
+            holder.deleteButton.setImageResource(R.color.transparent)
+            holder.decideButton.setImageResource(R.drawable.ic_baseline_done_24)
+        }
+        holder.delegateButton.setOnClickListener {
+            taskItem.setClass(Classified.Delegate)
+            holder.doNowButton.setImageResource(R.color.transparent)
+            holder.decideButton.setImageResource(R.color.transparent)
+            holder.deleteButton.setImageResource(R.color.transparent)
+            holder.delegateButton.setImageResource(R.drawable.ic_baseline_done_24)
+        }
+        holder.deleteButton.setOnClickListener {
+            taskItem.setClass(Classified.Delete)
+            holder.doNowButton.setImageResource(R.color.transparent)
+            holder.delegateButton.setImageResource(R.color.transparent)
+            holder.decideButton.setImageResource(R.color.transparent)
+            holder.deleteButton.setImageResource(R.drawable.ic_baseline_done_24)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -47,18 +64,7 @@ class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdap
         mList = list
     }
 
-    override fun onClick(p0: View?) {
-        if (p0?.background == getDrawable(p0?.context!!, R.color.black))
-            p0.background = getDrawable(p0.context!!, R.color.transparent)
-        else
-            p0.background = getDrawable(p0.context!!, R.color.black)
-
-        when (p0.id) {
-            R.id.doNowButton -> taskItem.setClass(Classified.Do)
-            R.id.decideButton -> taskItem.setClass(Classified.Decide)
-            R.id.delegateButton -> taskItem.setClass(Classified.Delegate)
-            R.id.deleteButton -> taskItem.setClass(Classified.Delete)
-        }
+    fun getList(): List<Task> {
+        return mList
     }
-
 }

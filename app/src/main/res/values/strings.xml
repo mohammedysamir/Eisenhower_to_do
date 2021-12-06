@@ -10,4 +10,6 @@
     <string name="doButton">doButton</string>
     <string name="decideButton">decideButton</string>
     <string name="delegateButton">delegateButton</string>
+    <string name="display_tasks">Display tasks</string>
+    <string name="tip_text"><![CDATA[Green: urgent&important\nBlue: not urgent&important\nOrange: urgent&not important\nRed: not urgent& not important]]></string>
 </resources>
