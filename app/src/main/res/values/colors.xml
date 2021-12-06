@@ -8,4 +8,5 @@
     <color name="doLater_color">#37A6DE</color>
     <color name="secondaryColor">#32338D</color>
     <color name="secondaryColorVariant">#8485BB</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
