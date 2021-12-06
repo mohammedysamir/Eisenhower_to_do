@@ -19,6 +19,10 @@ class Task(Name: String, Classified: Classified) {
     fun setClass(Classified: Classified) {
         taskClassified = Classified
     }
+
+    override fun toString(): String {
+        return "Task Name:$taskName, classed as:$taskClassified"
+    }
 }
 
 enum class Classified {
