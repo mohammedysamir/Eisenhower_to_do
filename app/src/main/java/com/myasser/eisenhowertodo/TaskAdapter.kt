@@ -8,7 +8,7 @@ import androidx.appcompat.content.res.AppCompatResources.*
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class TaskAdapter(private val mList: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>(),
+class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>(),
     View.OnClickListener {
     lateinit var taskItem: Task
 
@@ -41,6 +41,10 @@ class TaskAdapter(private val mList: List<Task>) : RecyclerView.Adapter<TaskAdap
 
     override fun getItemCount(): Int {
         return mList.size
+    }
+
+    fun setList(list: List<Task>) {
+        mList = list
     }
 
     override fun onClick(p0: View?) {

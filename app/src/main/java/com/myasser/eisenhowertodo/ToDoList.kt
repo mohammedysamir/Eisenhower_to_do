@@ -9,7 +9,9 @@ import com.myasser.eisenhowertodo.databinding.ActivityToDoListBinding
 
 class ToDoList : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityToDoListBinding
-    private val tasks = arrayListOf<Task>()
+    companion object{
+        private val tasks = arrayListOf<Task>()
+    }
     private var taskListString = ""
     var textCounter = 1
     override fun onCreate(savedInstanceState: Bundle?) {
