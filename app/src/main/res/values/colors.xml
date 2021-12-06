@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="doNow_color">#99CC01</color>
     <color name="delegate_color">#FF9F00</color>
-    <color name="eliminate_color">#FF4D4D</color>
+    <color name="delete_color">#FF4D4D</color>
     <color name="doLater_color">#37A6DE</color>
     <color name="secondaryColor">#32338D</color>
     <color name="secondaryColorVariant">#8485BB</color>

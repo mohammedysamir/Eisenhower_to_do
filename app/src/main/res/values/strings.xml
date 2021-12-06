@@ -6,4 +6,8 @@
     <string name="task_Input">Task name</string>
     <string name="backgroundtodo">BackgroundToDo</string>
     <string name="let_s_plan_them_button">Let\'s plan them</string>
+    <string name="deleteButton">deleteButton</string>
+    <string name="doButton">doButton</string>
+    <string name="decideButton">decideButton</string>
+    <string name="delegateButton">delegateButton</string>
 </resources>
