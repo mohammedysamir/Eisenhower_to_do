@@ -33,6 +33,7 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
         recyclerView.adapter = adapter
 
         binding.displayButton.setOnClickListener(this)
+        binding.deleteTasksButton.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -52,8 +53,16 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 }
                 //navigate
             }
+            R.id.deleteTasksButton -> {
+                //clear all lists
+                doNowTasks.clear()
+                decideTasks.clear()
+                delegateTasks.clear()
+                deleteTasks.clear()
+                adapter.clearList()
+                ToDoList.tasks.clear()
+            }
         }
     }
 
 }
-//TODO: add button on top of the page to delete all tasks and return to ToDoList activity

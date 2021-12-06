@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
+class TaskAdapter(private var mList: ArrayList<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val taskName: TextView = itemView.findViewById(R.id.taskName)
@@ -60,8 +60,12 @@ class TaskAdapter(private var mList: List<Task>) : RecyclerView.Adapter<TaskAdap
         return mList.size
     }
 
-    fun setList(list: List<Task>) {
+    fun setList(list: ArrayList<Task>) {
         mList = list
+    }
+
+    fun clearList(){
+        mList.clear()
     }
 
     fun getList(): List<Task> {

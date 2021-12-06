@@ -10,7 +10,7 @@ import com.myasser.eisenhowertodo.databinding.ActivityToDoListBinding
 class ToDoList : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityToDoListBinding
     companion object{
-        private val tasks = arrayListOf<Task>()
+        val tasks = ArrayList<Task>()
     }
     private var taskListString = ""
     var textCounter = 1
@@ -29,9 +29,10 @@ class ToDoList : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    fun getTasks(): List<Task> {
+    fun getTasks(): ArrayList<Task> {
         return tasks
     }
+
 
     private fun addToTasks() {
         val task = Task(binding.taskInputLayout.text.toString(), Classified.None)
