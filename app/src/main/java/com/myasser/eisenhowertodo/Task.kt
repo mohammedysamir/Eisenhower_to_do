@@ -1,14 +1,14 @@
 package com.myasser.eisenhowertodo
 
 
-class Task(Name: String, Classified: String) {
+class Task(Name: String,Classified : Classified) {
     private var taskName = Name
     private var taskClassified = Classified
     fun getName(): String {
         return taskName
     }
 
-    fun getClassified(): String {
+    fun getClassified(): Classified {
         return taskClassified
     }
 
@@ -16,7 +16,11 @@ class Task(Name: String, Classified: String) {
         taskName = name
     }
 
-    fun setClass(classified: String) {
-        taskClassified = classified
+    fun setClass(Classified: Classified) {
+        taskClassified = Classified
     }
 }
+
+enum class Classified {
+    Do, Decide, Delegate, Delete,None
+} 

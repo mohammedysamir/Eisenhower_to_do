@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import java.util.*
-
+//started in 5/12/21
 class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

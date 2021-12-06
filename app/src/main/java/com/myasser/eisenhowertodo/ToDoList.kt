@@ -29,7 +29,7 @@ class ToDoList : AppCompatActivity() {
     }
 
     private fun addToTasks() {
-        val task = Task(binding.taskInputLayout.text.toString(), "unclassified")
+        val task = Task(binding.taskInputLayout.text.toString(), Classified.None)
         tasks.add(task)
         taskListString += "${textCounter++}: ${binding.taskInputLayout.text.toString()}\n"
         binding.taskList.text = taskListString
