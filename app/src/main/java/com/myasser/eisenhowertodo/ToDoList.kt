@@ -45,8 +45,9 @@ class ToDoList : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         if (p0?.id == R.id.navigateButton) {
-            val intent: Intent = Intent(this, EisenhowerList::class.java)
+            val intent = Intent(this, EisenhowerList::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

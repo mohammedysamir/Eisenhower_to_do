@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="420dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/edit_text_border"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ocraextended"
+        android:hint="Task Name"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <ImageButton
+        android:id="@+id/doNowButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/doNow_color"
+        android:contentDescription="@string/doButton"
+        app:borderWidth="0dp" />
+
+    <ImageButton
+        android:id="@+id/decideButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/doLater_color"
+        android:contentDescription="@string/decideButton"
+        app:borderWidth="0dp" />
+
+    <ImageButton
+        android:id="@+id/delegateButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/delegate_color"
+        android:contentDescription="@string/delegateButton" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/delete_color"
+        android:contentDescription="@string/deleteButton" />
+
+</LinearLayout>
