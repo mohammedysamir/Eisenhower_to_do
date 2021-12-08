@@ -1,8 +1,10 @@
 package com.myasser.eisenhowertodo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.myasser.eisenhowertodo.databinding.ActivityEisenhowerListBinding
@@ -61,6 +63,13 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 deleteTasks.clear()
                 adapter.clearList()
                 ToDoList.tasks.clear()
+                ToDoList.taskListString=""
+                adapter.setList(ToDoList.tasks)
+                binding.taskRecyclerView.removeAllViews()
+                //intent and navigate to To do activity
+                val intent= Intent(this,ToDoList::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }
