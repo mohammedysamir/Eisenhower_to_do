@@ -8,8 +8,10 @@
         <entry key="..\:/eisenhower_to_do/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.20615384615384616" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/drawable/rounded_button.xml" value="0.20615384615384616" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/font/ocr_a.xml" value="0.67" />
+        <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-land/activity_eisenhower_list.xml" value="0.1765625" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-land/activity_splash.xml" value="0.22" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-land/activity_to_do_list.xml" value="0.22" />
+        <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-sw600dp/activity_eisenhower_list.xml" value="0.21" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-sw600dp/activity_splash.xml" value="0.144921875" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/layout-sw600dp/activity_to_do_list.xml" value="0.2" />
         <entry key="..\:/eisenhower_to_do/app/src/main/res/layout/activity_eisenhower_list.xml" value="0.19322916666666667" />
