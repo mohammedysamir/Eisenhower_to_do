@@ -5,15 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView
 import com.myasser.eisenhowertodo.databinding.ActivityToDoListBinding
 
 class ToDoList : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityToDoListBinding
-    companion object{
+
+    companion object {
         val tasks = ArrayList<Task>()
         var taskListString = ""
     }
+
     var textCounter = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,21 +39,18 @@ class ToDoList : AppCompatActivity(), View.OnClickListener {
     private fun addToTasks() {
         val task = Task(binding.taskInputLayout.text.toString(), Classified.None)
         tasks.add(task)
-        taskListString += "${textCounter++}: ${binding.taskInputLayout.text.toString()}\n"
+        taskListString += "${textCounter++}: ${binding.taskInputLayout.text}\n"
         binding.taskList.text = taskListString
         binding.taskInputLayout.text?.clear()
     }
 
     override fun onClick(p0: View?) {
         if (p0?.id == R.id.navigateButton) {
+            val databaseHelper = DatabaseHelper(applicationContext)
+            databaseHelper.insertTaskList(tasks, Classified.None)
             val intent = Intent(this, EisenhowerList::class.java)
             startActivity(intent)
             finish()
         }
-    }
-
-     fun clearTaskListText(){
-         val taskList=findViewById<TextView>(R.id.taskList)
-        taskList.text=""
     }
 }

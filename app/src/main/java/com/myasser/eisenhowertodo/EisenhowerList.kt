@@ -31,9 +31,10 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
         linearLayoutManager = LinearLayoutManager(this)
         recyclerView = binding.taskRecyclerView
         recyclerView.layoutManager = linearLayoutManager
-        adapter.setList(todoList.getTasks())
+        //adapter.setList(todoList.getTasks())
+        val databaseHelper = DatabaseHelper(applicationContext)
+        adapter.setList(databaseHelper.readData(Classified.None))
         recyclerView.adapter = adapter
-
         binding.displayButton.setOnClickListener(this)
         binding.deleteTasksButton.setOnClickListener(this)
     }
@@ -53,6 +54,13 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                     if (t.getClassified() == Classified.Delete)
                         deleteTasks.add(t)
                 }
+                //Add tasks to sql
+                val databaseHelper = DatabaseHelper(applicationContext)
+                databaseHelper.insertTaskList(doNowTasks, Classified.Do)
+                databaseHelper.insertTaskList(decideTasks, Classified.Decide)
+                databaseHelper.insertTaskList(delegateTasks, Classified.Delegate)
+                databaseHelper.insertTaskList(deleteTasks, Classified.Delete)
+                databaseHelper.close()
                 //navigate
             }
             R.id.deleteTasksButton -> {
@@ -63,11 +71,15 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 deleteTasks.clear()
                 adapter.clearList()
                 ToDoList.tasks.clear()
-                ToDoList.taskListString=""
+                ToDoList.taskListString = ""
                 adapter.setList(ToDoList.tasks)
                 binding.taskRecyclerView.removeAllViews()
+                //Delete from db
+                val databaseHelper = DatabaseHelper(applicationContext)
+                databaseHelper.clearAllData()
+                databaseHelper.close()
                 //intent and navigate to To do activity
-                val intent= Intent(this,ToDoList::class.java)
+                val intent = Intent(this, ToDoList::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -75,3 +87,5 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
     }
 
 }
+
+//TODO: after the current code with lists and DB works good, remove lists and depend only on the DB
