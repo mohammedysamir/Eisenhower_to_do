@@ -16,7 +16,7 @@
         android:text="@string/do_first"
         android:textAlignment="center"
         android:textColor="@color/doNow_color"
-        android:textSize="40sp"
+        android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,13 +30,13 @@
         android:text="@string/do_now_slogan"
         android:textAlignment="center"
         android:textColor="@color/doNow_color"
-        android:textSize="29sp" />
+        android:textSize="24sp" />
 
     <LinearLayout
         android:id="@+id/doNowListLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="25dp"
         android:layout_weight="3"
         android:background="@drawable/fragment_background"
         android:backgroundTint="@color/doNow_color"

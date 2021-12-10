@@ -14,4 +14,6 @@
     <string name="tip_text"><![CDATA[Green: urgent&important\nBlue: not urgent&important\nOrange: urgent&not important\nRed: not urgent& not important]]></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="do_first">Do First</string>
+    <string name="do_now_slogan">Short-term goals</string>
 </resources>
