@@ -16,4 +16,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="do_first">Do First</string>
     <string name="do_now_slogan">Short-term goals</string>
+    <string name="navigatenextbutton">navigateNextButton</string>
+    <string name="navigateBeforeButton">TODO</string>
+    <string name="decide_slogan">Long-term goals</string>
+    <string name="decide">Plan them</string>
+    <string name="delegate_slogan">To someone</string>
+    <string name="delegate">Delegate them</string>
+    <string name="delete_slogan">They are useless</string>
+    <string name="delete">Eliminate them</string>
 </resources>
