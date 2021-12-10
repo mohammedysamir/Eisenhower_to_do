@@ -70,7 +70,6 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 deleteTasks.clear()
                 adapter.clearList()
                 ToDoList.tasks.clear()
-                ToDoList.taskListString = ""
                 adapter.setList(ToDoList.tasks)
                 binding.taskRecyclerView.removeAllViews()
                 //Delete from db

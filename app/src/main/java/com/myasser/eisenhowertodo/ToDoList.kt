@@ -12,9 +12,9 @@ class ToDoList : AppCompatActivity(), View.OnClickListener {
 
     companion object {
         val tasks = ArrayList<Task>()
-        var taskListString = ""
     }
 
+    var taskListString = ""
     var textCounter = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
