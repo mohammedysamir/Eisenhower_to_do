@@ -1,23 +1,22 @@
 <resources>
-    <string name="app_name">Eisenhower to do</string>
-    <string name="splash_background">Splash_background</string>
-    <string name="eisenhower_to_do">Eisenhower To-Do</string>
+    <string name="app_name" translatable="false">Eisenhower to do</string>
+    <string name="splash_background" translatable="false">Splash_background</string>
+    <string name="eisenhower_to_do" translatable="false">Eisenhower To-Do</string>
     <string name="list_all_your_tasks">List all your tasks</string>
     <string name="task_Input">Task name</string>
-    <string name="backgroundtodo">BackgroundToDo</string>
+    <string name="backgroundtodo" translatable="false">BackgroundToDo</string>
     <string name="let_s_plan_them_button">Let\'s plan them</string>
-    <string name="deleteButton">deleteButton</string>
-    <string name="doButton">doButton</string>
-    <string name="decideButton">decideButton</string>
-    <string name="delegateButton">delegateButton</string>
+    <string name="deleteButton" translatable="false">deleteButton</string>
+    <string name="doButton" translatable="false">doButton</string>
+    <string name="decideButton" translatable="false">decideButton</string>
+    <string name="delegateButton" translatable="false">delegateButton</string>
     <string name="display_tasks">Display tasks</string>
-    <string name="tip_text"><![CDATA[Green: urgent&important\nBlue: not urgent&important\nOrange: urgent&not important\nRed: not urgent& not important]]></string>
+    <string name="tip_text"><![CDATA[Green: urgent & important\nBlue: not urgent & important\nOrange: urgent & not important\nRed: not urgent & not important]]></string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="do_first">Do First</string>
     <string name="do_now_slogan">Short-term goals</string>
-    <string name="navigatenextbutton">navigateNextButton</string>
-    <string name="navigateBeforeButton">TODO</string>
+    <string name="navigatenextbutton" translatable="false">navigateNextButton</string>
+    <string name="navigateBeforeButton" translatable="false">TODO</string>
     <string name="decide_slogan">Long-term goals</string>
     <string name="decide">Plan them</string>
     <string name="delegate_slogan">To someone</string>
