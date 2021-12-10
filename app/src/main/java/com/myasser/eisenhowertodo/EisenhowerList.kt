@@ -16,12 +16,10 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
     private val tasks = todoList.getTasks()
     private val adapter = TaskAdapter(tasks)
 
-    companion object {
-        val doNowTasks = arrayListOf<Task>()
-        val decideTasks = arrayListOf<Task>()
-        val delegateTasks = arrayListOf<Task>()
-        val deleteTasks = arrayListOf<Task>()
-    }
+    private val doNowTasks = arrayListOf<Task>()
+    private val decideTasks = arrayListOf<Task>()
+    private val delegateTasks = arrayListOf<Task>()
+    private val deleteTasks = arrayListOf<Task>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +59,7 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 databaseHelper.insertTaskList(deleteTasks, Classified.Delete)
                 databaseHelper.close()
                 //navigate
-                startActivity(Intent(this,taskFragment::class.java))
+                startActivity(Intent(this, taskFragment::class.java))
                 finish()
             }
             R.id.deleteTasksButton -> {

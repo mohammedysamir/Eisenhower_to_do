@@ -93,6 +93,14 @@ class DatabaseHelper(val context: Context) : SQLiteOpenHelper(context, databaseN
         db.delete(deleteTable, null, null)
     }
 
+    fun clearCategories(){
+        val db: SQLiteDatabase = this.writableDatabase
+        db.delete(doTable, null, null)
+        db.delete(decideTable, null, null)
+        db.delete(delegateTable, null, null)
+        db.delete(deleteTable, null, null)
+    }
+
     fun deleteTask(task: Task) {
         val db: SQLiteDatabase = this.writableDatabase
         val table = when (task.getClassified()) {

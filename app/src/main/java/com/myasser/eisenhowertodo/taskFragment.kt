@@ -15,11 +15,8 @@ import com.myasser.eisenhowertodo.databinding.ActivityTaskFragmentBinding
 
 class taskFragment : AppCompatActivity(), View.OnClickListener {
     lateinit var bind: ActivityTaskFragmentBinding
-
-    companion object {
-        var position: Int = 1
-        var currentTaskClass: Classified = Classified.Do
-    }
+    var position: Int = 1
+    var currentTaskClass: Classified = Classified.Do
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -129,6 +126,8 @@ class taskFragment : AppCompatActivity(), View.OnClickListener {
                 bind.navigateNext.visibility = ViewGroup.VISIBLE
             }
             R.id.backToEisenhower -> {
+                val databaseHelper = DatabaseHelper(applicationContext)
+                databaseHelper.clearCategories()
                 startActivity(Intent(this, EisenhowerList::class.java))
                 finish()
             }
