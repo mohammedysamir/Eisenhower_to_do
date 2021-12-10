@@ -11,7 +11,7 @@
     <string name="decideButton" translatable="false">decideButton</string>
     <string name="delegateButton" translatable="false">delegateButton</string>
     <string name="display_tasks">Display tasks</string>
-    <string name="tip_text"><![CDATA[Green: urgent & important\nBlue: not urgent & important\nOrange: urgent & not important\nRed: not urgent & not important]]></string>
+    <string name="tip_text">Green: urgent and important\nBlue: not urgent and important\nOrange: urgent and not important\nRed: not urgent and not important</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="do_first">Do First</string>
     <string name="do_now_slogan">Short-term goals</string>

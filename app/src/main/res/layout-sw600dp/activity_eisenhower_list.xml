@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.4"
+        android:alpha="0.3"
         android:scaleType="centerCrop"
         android:src="@drawable/eisenhower_matrix_background" />
 
@@ -29,7 +29,7 @@
             android:fontFamily="@font/ocraextended"
             android:text="@string/tip_text"
             android:textColor="@color/black"
-            android:textSize="32sp"
+            android:textSize="29sp"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
