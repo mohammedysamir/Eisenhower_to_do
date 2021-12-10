@@ -1,5 +1,6 @@
 package com.myasser.eisenhowertodo
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.media.MediaPlayer
 import android.os.Build
@@ -10,10 +11,10 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import com.myasser.eisenhowertodo.databinding.ActivityDoTaskBinding
+import com.myasser.eisenhowertodo.databinding.ActivityTaskFragmentBinding
 
-class DoTask : AppCompatActivity(), View.OnClickListener {
-    lateinit var bind: ActivityDoTaskBinding
+class taskFragment : AppCompatActivity(), View.OnClickListener {
+    lateinit var bind: ActivityTaskFragmentBinding
 
     companion object {
         var position: Int = 1
@@ -23,13 +24,14 @@ class DoTask : AppCompatActivity(), View.OnClickListener {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bind = ActivityDoTaskBinding.inflate(layoutInflater)
+        bind = ActivityTaskFragmentBinding.inflate(layoutInflater)
         setContentView(bind.root)
-        bind.navigateNext?.setOnClickListener(this)
-        bind.navigateBack?.setOnClickListener(this)
+        bind.navigateNext.setOnClickListener(this)
+        bind.navigateBack.setOnClickListener(this)
+        bind.backToEisenhower.setOnClickListener(this)
         if (position == 1) {
-            bind.navigateBack?.visibility = ViewGroup.GONE
-            bind.navigateNext?.imageTintList =
+            bind.navigateBack.visibility = ViewGroup.GONE
+            bind.navigateNext.imageTintList =
                 ColorStateList.valueOf(ContextCompat.getColor(applicationContext, R.color.doLater_color))
         }
         getData()
@@ -56,16 +58,16 @@ class DoTask : AppCompatActivity(), View.OnClickListener {
                     color = ContextCompat.getColor(applicationContext, R.color.doLater_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.delegate_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.doNow_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.decide)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.decide_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.decide)
+                    bind.fragmentSlogan.text = resources.getString(R.string.decide_slogan)
                     currentTaskClass = Classified.Decide
                 }
                 if (position == 3) {
                     color = ContextCompat.getColor(applicationContext, R.color.delegate_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.delete_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.doLater_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.delegate)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.delegate_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.delegate)
+                    bind.fragmentSlogan.text = resources.getString(R.string.delegate_slogan)
                     currentTaskClass = Classified.Delegate
 
                 }
@@ -73,20 +75,20 @@ class DoTask : AppCompatActivity(), View.OnClickListener {
                     color = ContextCompat.getColor(applicationContext, R.color.delete_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.doNow_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.delegate_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.delete)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.delete_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.delete)
+                    bind.fragmentSlogan.text = resources.getString(R.string.delete_slogan)
                     currentTaskClass = Classified.Delete
-                    bind.navigateNext?.visibility = ViewGroup.GONE
+                    bind.navigateNext.visibility = ViewGroup.GONE
                 } else {
-                    bind.navigateNext?.visibility = ViewGroup.VISIBLE
+                    bind.navigateNext.visibility = ViewGroup.VISIBLE
                 }
-                bind.fragmentListLayout?.backgroundTintList = ColorStateList.valueOf(color)
-                bind.fragmentTitle?.setTextColor(color)
-                bind.fragmentSlogan?.setTextColor(color)
-                bind.navigateNext?.imageTintList = ColorStateList.valueOf(nextFragmentColor)
-                bind.navigateBack?.imageTintList = ColorStateList.valueOf(backFragmentColor)
+                bind.fragmentListLayout.backgroundTintList = ColorStateList.valueOf(color)
+                bind.fragmentTitle.setTextColor(color)
+                bind.fragmentSlogan.setTextColor(color)
+                bind.navigateNext.imageTintList = ColorStateList.valueOf(nextFragmentColor)
+                bind.navigateBack.imageTintList = ColorStateList.valueOf(backFragmentColor)
                 getData()
-                bind.navigateBack?.visibility = ViewGroup.VISIBLE
+                bind.navigateBack.visibility = ViewGroup.VISIBLE
             }
             R.id.navigateBack -> {
                 if (position > 1)
@@ -95,42 +97,46 @@ class DoTask : AppCompatActivity(), View.OnClickListener {
                     color = ContextCompat.getColor(applicationContext, R.color.doNow_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.doLater_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.doNow_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.do_first)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.do_now_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.do_first)
+                    bind.fragmentSlogan.text = resources.getString(R.string.do_now_slogan)
                     currentTaskClass = Classified.Do
-                    bind.navigateBack?.visibility = ViewGroup.GONE
+                    bind.navigateBack.visibility = ViewGroup.GONE
                 } else {
-                    bind.navigateBack?.visibility = ViewGroup.VISIBLE
+                    bind.navigateBack.visibility = ViewGroup.VISIBLE
                 }
                 if (position == 2) {
                     color = ContextCompat.getColor(applicationContext, R.color.doLater_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.delegate_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.doNow_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.decide)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.decide_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.decide)
+                    bind.fragmentSlogan.text = resources.getString(R.string.decide_slogan)
                     currentTaskClass = Classified.Decide
                 }
                 if (position == 3) {
                     color = ContextCompat.getColor(applicationContext, R.color.delegate_color)
                     nextFragmentColor = ContextCompat.getColor(applicationContext, R.color.delete_color)
                     backFragmentColor = ContextCompat.getColor(applicationContext, R.color.doLater_color)
-                    bind.fragmentTitle?.text = resources.getString(R.string.decide)
-                    bind.fragmentSlogan?.text = resources.getString(R.string.decide_slogan)
+                    bind.fragmentTitle.text = resources.getString(R.string.decide)
+                    bind.fragmentSlogan.text = resources.getString(R.string.decide_slogan)
                     currentTaskClass = Classified.Delegate
                 }
-                bind.fragmentListLayout?.backgroundTintList = ColorStateList.valueOf(color)
-                bind.fragmentTitle?.setTextColor(color)
-                bind.fragmentSlogan?.setTextColor(color)
-                bind.navigateNext?.imageTintList = ColorStateList.valueOf(nextFragmentColor)
-                bind.navigateBack?.imageTintList = ColorStateList.valueOf(backFragmentColor)
+                bind.fragmentListLayout.backgroundTintList = ColorStateList.valueOf(color)
+                bind.fragmentTitle.setTextColor(color)
+                bind.fragmentSlogan.setTextColor(color)
+                bind.navigateNext.imageTintList = ColorStateList.valueOf(nextFragmentColor)
+                bind.navigateBack.imageTintList = ColorStateList.valueOf(backFragmentColor)
                 getData()
-                bind.navigateNext?.visibility = ViewGroup.VISIBLE
+                bind.navigateNext.visibility = ViewGroup.VISIBLE
+            }
+            R.id.backToEisenhower -> {
+                startActivity(Intent(this, EisenhowerList::class.java))
+                finish()
             }
         }
     }
 
     private fun getData() {
-        bind.fragmentListLayout?.removeAllViews()
+        bind.fragmentListLayout.removeAllViews()
         //fill the linear layout with do tasks
         val databaseHelper = DatabaseHelper(applicationContext)
         for (task in databaseHelper.readData(currentTaskClass)) {
@@ -142,7 +148,7 @@ class DoTask : AppCompatActivity(), View.OnClickListener {
                 MediaPlayer.create(this, R.raw.check_sound).start()
                 databaseHelper.deleteTask(task)
             }
-            bind.fragmentListLayout?.addView(checkBox)
+            bind.fragmentListLayout.addView(checkBox)
         }
     }
 }

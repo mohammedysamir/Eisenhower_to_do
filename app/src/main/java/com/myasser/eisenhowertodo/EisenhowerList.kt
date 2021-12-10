@@ -61,7 +61,7 @@ class EisenhowerList : AppCompatActivity(), View.OnClickListener {
                 databaseHelper.insertTaskList(deleteTasks, Classified.Delete)
                 databaseHelper.close()
                 //navigate
-                startActivity(Intent(this,DoTask::class.java))
+                startActivity(Intent(this,taskFragment::class.java))
                 finish()
             }
             R.id.deleteTasksButton -> {

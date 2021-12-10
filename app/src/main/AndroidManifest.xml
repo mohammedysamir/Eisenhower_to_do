@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EisenhowerToDo">
         <activity
-            android:name=".DoTask"
+            android:name=".taskFragment"
             android:exported="false" />
         <activity
             android:name=".EisenhowerList"
