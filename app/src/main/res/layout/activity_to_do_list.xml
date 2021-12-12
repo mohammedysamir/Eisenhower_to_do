@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:padding="16dp"
+    tools:context=".ToDoList">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:contentDescription="@string/backgroundtodo"
+        android:padding="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/todo_list_background" />
+
+    <TextView
+        android:id="@+id/ListText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/ocraextended"
+        android:text="@string/list_all_your_tasks"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/taskInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ListText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/ocraextended"
+        android:gravity="center"
+        android:hint="@string/task_Input"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textImeMultiLine"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColorHint="#80121212"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/taskList"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/taskInputLayout"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/ocraextended"
+        android:lineSpacingExtra="10dp"
+        android:padding="16dp"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/ocraextended"
+        android:padding="20dp"
+        android:text="@string/let_s_plan_them_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+</RelativeLayout>

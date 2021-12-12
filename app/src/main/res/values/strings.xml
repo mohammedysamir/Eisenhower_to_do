@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Eisenhower to do</string>
+    <string name="app_name" translatable="false">Eisenhower to do</string>
+    <string name="splash_background" translatable="false">Splash_background</string>
+    <string name="eisenhower_to_do" translatable="false">Eisenhower To-Do</string>
+    <string name="list_all_your_tasks">List all your tasks</string>
+    <string name="task_Input">Task name</string>
+    <string name="backgroundtodo" translatable="false">BackgroundToDo</string>
+    <string name="let_s_plan_them_button">Let\'s plan them</string>
+    <string name="deleteButton" translatable="false">deleteButton</string>
+    <string name="doButton" translatable="false">doButton</string>
+    <string name="decideButton" translatable="false">decideButton</string>
+    <string name="delegateButton" translatable="false">delegateButton</string>
+    <string name="display_tasks">Display tasks</string>
+    <string name="tip_text">Green: urgent and important\nBlue: not urgent and important\nOrange: urgent and not important\nRed: not urgent and not important</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="do_first">Do First</string>
+    <string name="do_now_slogan">Short-term goals</string>
+    <string name="navigatenextbutton" translatable="false">navigateNextButton</string>
+    <string name="navigateBeforeButton" translatable="false">TODO</string>
+    <string name="decide_slogan">Long-term goals</string>
+    <string name="decide">Plan them</string>
+    <string name="delegate_slogan">To someone</string>
+    <string name="delegate">Delegate them</string>
+    <string name="delete_slogan">They are useless</string>
+    <string name="delete">Eliminate them</string>
 </resources>

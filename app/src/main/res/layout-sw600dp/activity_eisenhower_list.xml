@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="?attr/colorPrimary"
+    tools:context=".EisenhowerList">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eisenhower_matrix_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/ocraextended"
+            android:text="@string/tip_text"
+            android:textColor="@color/black"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/taskRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/deleteTasksButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#9D0208"
+                android:padding="25dp"
+                android:src="@drawable/ic_baseline_delete_forever_64" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/displayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/ocraextended"
+                android:padding="25dp"
+                android:text="@string/display_tasks"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="35sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

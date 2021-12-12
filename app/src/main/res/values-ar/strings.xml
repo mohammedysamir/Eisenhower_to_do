@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="list_all_your_tasks">اكتب كل خططك</string>
+    <string name="task_Input">اسم المهمة</string>
+    <string name="let_s_plan_them_button">فلنبدأ التخطيط</string>
+    <string name="display_tasks">استعرض المهام</string>
+    <string name="tip_text">الاخضر: مهم و عاجل ، الازرق: مهم و غير عاجل ، البرتقالي: غير مهم و عاجل ، الاحمر: غير مهم و غير عاجل</string>
+    <string name="do_first">ابدأ بهم</string>
+    <string name="do_now_slogan">أهداف قصيرة الأمد</string>
+    <string name="decide_slogan">أهداف طويلة الأمد</string>
+    <string name="decide">خطط لهم</string>
+    <string name="delegate_slogan">الي شخص اخر</string>
+    <string name="delegate">فوضهم</string>
+    <string name="delete_slogan">غير مهمين لك</string>
+    <string name="delete">تخلص منهم</string>
+</resources>
